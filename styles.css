@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+  color: #031d77;
+  text-align: center;
+  font-family: 'Recursive', sans-serif;
+  background-image: url(images/roma_background.png);
+  background-size: cover;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 6rem 0;
+  height: 100vh;
+}
+
+.heading-box {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 2px 2px 10px #031d77;
+  filter: grayscale(100%);
+  overflow: hidden;
+}
+
+.heading-box:hover {
+  filter: grayscale(0%);
+  transition: .8s;
+  transform: translateY(-5px);
+}
+
+.heading-primary {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.heading-secondary {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.about {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.profile-image {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: .6;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+.portfolio-button {
+  display: block;
+  margin: 1rem auto;
+  padding: .5rem;
+  z-index: 5;
+  background-color: whitesmoke;
+  opacity: 1;
+  border: 1px solid #c47931;
+  border-radius: 1rem;
+}
+
+.portfolio-button:hover {
+  transition: .2s;
+  transform: translateY(-2px);
+  background-color: #c47931;
+}
+
+.portfolio-button__link {
+  text-decoration: none;
+  color: #031d77;
+  font-family: 'Recursive', sans-serif;
+}
+
+.portfolio-button__link i:hover {
+  transition: .2s;
+  transform: translateY(-2px);
+}
+
+.portfolio-button__link i {
+  margin: 0 .5rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  flex-direction: row;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px #031d77;
+  filter: grayscale(100%);
+}
+
+.card:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.card:hover {
+  filter: grayscale(0%);
+  transition: .8s;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1100px) {
+  /* For a screen < 1100px, this CSS will be read */
+  .container {
+    width: 90%;
+  }
+  .cards {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin: 2rem auto;
+    filter: grayscale(0%);
+  }
+  .card:not(:last-child) {
+    margin-right: 0;
+  }
+  .heading-box {
+    filter: grayscale(0%);
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 90%;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  
+  .card {
+    margin: 2rem auto;
+  }
+
+  .heading-primary {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .heading-secondary {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+  .card-text {
+    font-size: .8rem;
+  }
+  .profile-image {
+    opacity: .3;
+    height: 150%;
+    bottom: -3rem;
+  }
+}
